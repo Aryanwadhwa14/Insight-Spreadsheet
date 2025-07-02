@@ -1,0 +1,1 @@
+export { SpreadsheetStyle } from "./SpreadsheetStyle";
