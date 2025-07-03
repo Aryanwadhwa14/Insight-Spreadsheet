@@ -184,6 +184,24 @@ export const HeaderSection = (): JSX.Element => {
     });
   };
 
+  const handleTabClick = (tabId: string) => {
+    if (activeTab !== tabId) {
+      handleTabChange(tabId);
+    }
+  }
+
+  const handleTabKeyDown = (e: React.KeyboardEvent, tabId: string) => {
+    if (e.key === 'Enter') {
+      handleTabClick(tabId);
+    }
+  };
+
+  const handleTabMouseOver = (tabId: string) => {
+    if (editingTab === null) {
+      setActiveTab(tabId);
+    }
+  };
+
   return (
     <header className="flex items-center gap-3 sm:gap-6 px-4 sm:px-8 py-2 w-full bg-white border-t border-gray-200 h-10 sm:h-12 overflow-x-auto shadow-sm">
       <Tabs
