@@ -46,3 +46,11 @@ export const useColumnResize = (initialColumns: number) => {
     toggleColumnVisibility,
   };
 };
+
+export default useColumnResize;
+
+// This hook manages the state of columns in a spreadsheet-like interface.
+// It allows resizing columns and toggling their visibility.
+// The initial state is set with a default width of 150 pixels and not hidden.
+// The `resizeColumn` function updates the width of a specified column,
+
